@@ -130,20 +130,20 @@ let PieChart = function( options ) {
 }
 
 // Класс отображает окружность
-class Cicle {
-    constructor(xpos, ypos, radius, color) {
-        this.xpos = xpos;
-        this.ypos = ypos;
-        this.radius = radius;
-        this.color = color;
-    }
+let Cycle = function( options ) {
+    this.options = options;
+    this.canvas = options.canvas;
+    this.ctx = this.canvas.getContext('2d');
+    this.colors = options.colors;
 
-    draw( context ) {
-        context.beginPath();
-        context.arc( this.xpos, this.ypos, this.radius, 0, Math.PI*2, false );
-        context.fill = "yellow";
-        context.stroke();
-        context.closePath();
+    this.drawCycle = function() {
+        this.ctx.beginPath();
+        this.ctx.arc( this.options.sizes.left,this.options.sizes.top,this.options.sizes.radius,0,2 * Math.PI,false );
+        this.ctx.fillStyle = 'green';
+        this.ctx.fill();
+        this.ctx.lineWidth = 1;
+        this.ctx.strokeStyle = 'green';
+        this.ctx.stroke();
     }
 }
 
