@@ -60,6 +60,13 @@ window.addEventListener('DOMContentLoaded',function() {
     }
 });
 
+
+
+
+
+
+
+
 // класс рисовальщик
 class Drawer {
     // рисует линию
