@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded',function() {
     const coefficient = 2480/3508;
     let regions = {
-        'rфыавфыавфыegion1': {
+        'Ленинградская область': {
                 sizes: {
                     'top' : 150,
                     'left' : 480,
@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded',function() {
                      'Pop' : 2,
                 }
         },
-        'regфафывафion2': {
+        'Мурманская область': {
                 sizes: {
                     'top' : 300,
                     'left' : 333,
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded',function() {
                      'Pop' : 2,
                 }
         },
-        '343': {
+        'Карелия': {
                 sizes: {
                     'top' : 480,
                     'left' : 650,
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded',function() {
                 canvas: myCanvas,
                 sizes: regions[region].sizes,
                 data: regions[region].data,
-                colors:['yellow','orange','purple','green']
+                colors:['#4CD19C','#D94139','#F5B452']
             });
             myPiechart.draw();
         }
